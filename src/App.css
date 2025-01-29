@@ -11,14 +11,23 @@ body {
   align-items: center;
 }
 
-.main-background {
+.main-cotainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-content: center;
+   text-align: center;
+   height: 300px;
+}
+
+.main-background-input {
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.main-background input {
+.main-background-input input {
   width: 600px;
   height: 60px;
   border-top-left-radius: 5px;
@@ -29,7 +38,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.main-background button {
+.main-background-input button {
   width: 50px;
   height: 60px;
   background-color: rgb(170, 229, 209);
@@ -40,6 +49,6 @@ body {
   align-items: center;
 }
 
-.main-background input, button:focus {
+.main-background-input input, button:focus {
   outline: none;
 }

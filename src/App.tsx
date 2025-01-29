@@ -9,16 +9,21 @@ function App() {
   const [url, setUrl] = useState('');
 
   const handleUrl = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e);     
-    // const {} = e.target;          
+      
+    const { value } = e.target;          
+
+    setUrl(value);
   };
 
   return (
-    <div className='main-background'>
-      <input placeholder='https://www.google.com/' onChange={(e) => handleUrl(e)}/>
-      <button >
-        <FontAwesomeIcon icon={faLink} onClick={()=> setUrl(url)}/>
-      </button>
+    <div className='main-cotainer'>
+      <h1>URL Shortener</h1>
+      <div className='main-background-input'>
+        <input placeholder='https://vercel.com/' onChange={(e) => handleUrl(e)}/>
+        <button>
+          <FontAwesomeIcon icon={faLink} onClick={()=> alert(url)}/>
+        </button>
+      </div>
     </div>
   )
 }
