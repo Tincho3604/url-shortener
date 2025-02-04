@@ -1,12 +1,14 @@
 
 import { Application } from '../application/application';
+import { Router } from '../router/router';
+import { UrlController } from '../controllers/urlController';
 
-// Se inicia la app
+// Se inicializa la app
 const app = new Application();
 const application = app.init();
 
+// Se instancia el router
+const router = new Router(application);
 
-application.post('/short-url', (req, _) => {
-    const { url } = req.body;
-    console.log(url)
-});
+
+router.post('/short-url', UrlController.shortUrl);
